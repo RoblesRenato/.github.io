@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renato Montagnoli Robles | Portfólio</title>
+  <style>
+    :root {
+      --bg-color: #f8fafc;
+      --surface-color: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --primary: #1d4ed8;
+      --primary-light: #eff6ff;
+      --border-color: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: var(--surface-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 48px 0;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .institution {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .bio {
+      max-width: 540px;
+      margin: 0 auto;
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-style: italic;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* Conteúdo Principal */
+    main {
+      padding: 48px 0;
+    }
+
+    .project-header {
+      margin-bottom: 28px;
+    }
+
+    .section-label {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    h2 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Grade do Projeto */
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 640px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .card {
+      background-color: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .card h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card h3::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: var(--primary);
+      border-radius: 50%;
+    }
+
+    .card p {
+      font-size: 0.975rem;
+      color: var(--text-muted);
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: var(--surface-color);
+      border-top: 1px solid var(--border-color);
+      padding: 36px 0;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .footer-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+
+    .github-link {
+      display: inline-block;
+      color: var(--primary);
+      background-color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+      word-break: break-all;
+    }
+
+    .github-link:hover,
+    .github-link:focus {
+      background-color: #dbeafe;
+      border-color: #bfdbfe;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <span class="badge">Ciência de Dados</span>
+      <h1>Renato Montagnoli Robles</h1>
+      <p class="institution">Fatec Adamantina</p>
+      <p class="bio">"Gosto de estar sempre com a minha familia."</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="project-header">
+        <span class="section-label">Projeto</span>
+        <h2>AuAtendente</h2>
+      </div>
+
+      <div class="project-grid">
+        <article class="card">
+          <h3>Problema</h3>
+          <p>O principal era a alta demanda de mensagens no WhatsApp, para responder todos.</p>
+        </article>
+
+        <article class="card">
+          <h3>O que eu fiz</h3>
+          <p>Desenvolvemos um aplicativo que já direciona o departamento que a pessoa gostaria de falar.</p>
+        </article>
+
+        <article class="card">
+          <h3>Como eu fiz</h3>
+          <p>Fizemos através do Visual Studio Code</p>
+        </article>
+
+        <article class="card">
+          <h3>Resultado</h3>
+          <p>Estamos na fase de Teste.</p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="footer-title">Contatos</p>
+      <a class="github-link" href="https://github.com/RoblesRenato" target="_blank" rel="noopener noreferrer">
+        GitHub: https://github.com/RoblesRenato
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
